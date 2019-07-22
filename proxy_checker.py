@@ -7,9 +7,9 @@ def is_bad_proxy(pip):
     try:
         proxy_handler = urllib.request.ProxyHandler({'https': pip})
         opener = urllib.request.build_opener(proxy_handler)
-        opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+        opener.addheaders = [('User-agent', 'Gautam Sharma User Agent')]
         urllib.request.install_opener(opener)
-        req=urllib.request.Request('https://www.yahoo.com')  # change the url address here
+        req=urllib.request.Request('http://requestbin.fullcontact.com/qz17aqqz')  # change the url address here
         sock=urllib.request.urlopen(req)
         print(req.full_url)
     except urllib.request.HTTPError as e:
